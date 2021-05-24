@@ -45,6 +45,7 @@
       "iso_file": "{{user `iso`}}",
 
       "http_directory": "subiquity/http",
+      "skip_export": "true",
 
       "boot_wait": "10s",
 
@@ -69,6 +70,18 @@
         "passwd/user-password-again={{ user `ssh_password` }} ",
         "-- <enter>"
       ]
+    }
+  ],
+
+  "provisioners": [
+    {
+      "type": "shell",
+      "scripts": [ "./script.sh" ]
+    },
+    {
+      "type": "ansible-local",
+      "playbook_file": "./playbook.yml",
+      "extra_arguments": [ "" ]
     }
   ]
 }

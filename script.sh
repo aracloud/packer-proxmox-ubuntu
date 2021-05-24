@@ -1,5 +1,6 @@
 #!/bin/bash -eux
 
+date > provision.txt
 # Install  tools needed
 sudo apt -y update
 sudo apt -y upgrade
