@@ -44,7 +44,7 @@
 
       "iso_file": "{{user `iso`}}",
 
-      "http_directory": "./http",
+      "http_directory": "subiquity/http",
 
       "boot_wait": "10s",
 
