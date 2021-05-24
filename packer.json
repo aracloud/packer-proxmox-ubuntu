@@ -11,7 +11,7 @@
       "vm_name": "{{user `template_name`}}",
       "template_description": "{{ user `template_description` }}",
 
-      "node": "{{user `proxmox_node`}}",
+      "node": "{{user `proxmox_node_name`}}",
       "cores": "{{ user `cores` }}",
       "sockets": "{{ user `sockets` }}",
       "memory": "{{ user `memory` }}",
@@ -45,7 +45,6 @@
       "iso_file": "{{user `iso`}}",
 
       "http_directory": "subiquity/http",
-      "skip_export": "true",
 
       "boot_wait": "10s",
 
@@ -77,11 +76,6 @@
     {
       "type": "shell",
       "scripts": [ "./script.sh" ]
-    },
-    {
-      "type": "ansible-local",
-      "playbook_file": "./playbook.yml",
-      "extra_arguments": [ "" ]
     }
   ]
 }
