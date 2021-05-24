@@ -1,5 +1,5 @@
 {
-	"proxmox_host": "100.0.0.100:8006",
+	"proxmox_host": "192.168.2.48:8006",
 	"proxmox_node_name": "pve-01",
 	"proxmox_api_user": "root@pam",
 	"proxmox_api_password": "password",
