@@ -49,25 +49,9 @@
       "boot_wait": "10s",
 
       "boot_command": [
-        "{{ user `boot_command_prefix` }}",
-        "/install/vmlinuz ",
-        "auto ",
-        "console-setup/ask_detect=false ",
-        "debconf/frontend=noninteractive ",
-        "debian-installer={{ user `locale` }} ",
-        "hostname={{ user `hostname` }} ",
-        "fb=false ",
-        "grub-installer/bootdev=/dev/sda<wait> ",
-        "initrd=/install/initrd.gz ",
-        "kbd-chooser/method=us ",
-        "keyboard-configuration/modelcode=SKIP ",
-        "locale={{ user `locale` }} ",
-        "noapic ",
-        "passwd/username={{ user `ssh_username` }} ",
-        "passwd/user-fullname={{ user `ssh_fullname` }} ",
-        "passwd/user-password={{ user `ssh_password` }} ",
-        "passwd/user-password-again={{ user `ssh_password` }} ",
-        "-- <enter>"
+        "<enter><enter><f6><esc><wait> ",
+        "autoinstall ds=nocloud-net;seedfrom=http://{{ .HTTPIP }}:{{ .HTTPPort }}/",
+        "<enter><wait>"
       ]
     }
   ],
