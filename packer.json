@@ -44,7 +44,6 @@
 
       "qemu_agent": true,
       "unmount_iso": true,
-      "keep_registered": true,
 
       "iso_file": "{{user `iso`}}",
 
