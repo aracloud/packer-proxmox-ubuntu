@@ -35,7 +35,7 @@
         }
       ],
 
-      "ssh_timeout": "90m",
+      "ssh_timeout": "20m",
       "ssh_password": "{{ user `ssh_password` }}",
       "ssh_username": "{{ user `ssh_username` }}",
 
@@ -46,11 +46,12 @@
 
       "http_directory": "subiquity/http",
 
-      "boot_wait": "10s",
+      "boot_wait": "5s",
       "boot_command": [
-        "<enter><enter><f6><esc><wait> ",
-        "autoinstall ds=nocloud-net;seedfrom=http://{{ .HTTPIP }}:{{ .HTTPPort }}/",
-        "<enter><wait>"
+        "<esc><wait><esc><wait><f6><wait><esc><wait>",
+        "<bs><bs><bs><bs><bs>",
+        "autoinstall ds=nocloud-net;s=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ ",
+        "--- <enter>"
       ]
     }
   ],
@@ -59,6 +60,12 @@
     {
       "type": "shell",
       "scripts": [ "./script.sh" ]
+    },
+    {
+      "type": "shell",
+      "inline": [
+        "while [ ! -f /var/lib/cloud/instance/boot-finished ]; do echo 'Waiting for cloud-init...'; sleep 1; done"
+      ]
     }
   ]
 }
