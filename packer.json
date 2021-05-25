@@ -1,4 +1,6 @@
 {
+  "sensitive-variables": ["proxmox_pass", "ssh_password" ],
+
   "builders": [
     {
       "type": "proxmox",
