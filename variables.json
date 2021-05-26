@@ -1,0 +1,24 @@
+{
+	"proxmox_host": "{{env `proxmox_host`}}",
+	"proxmox_node_name": "pm",
+	"proxmox_api_user": "root@pam",
+	"proxmox_api_password": "{{env `proxmox_pass`}}",
+
+	"template_name": "ubuntu-20-04",
+	"template_description": "Ubuntu 20.04 by packer",
+
+	"ssh_fullname": "ubuntu",
+	"ssh_password": "ubuntu",
+	"ssh_username": "ubuntu",
+
+	"hostname": "ubuntu-20-04",
+	"vmid": "111",
+	"locale": "en_US",
+	"cores": "1",
+	"sockets": "1",
+	"memory": "1024",
+	"disk_size": "16G",
+	"datastore": "vmdata",
+	"datastore_type": "lvm-thin",
+	"iso": "swdata:iso/ubuntu-20.04.2-live-server-amd64.iso"
+}
