@@ -1,6 +1,8 @@
 #cloud-config
 autoinstall:
   version: 1
+  early-commands:
+    - systemctl stop ssh # otherwise packer tries to connect and exceed max attempts
   locale: en_US
   keyboard:
     layout: en
@@ -27,6 +29,11 @@ autoinstall:
     install-server: yes
   user-data:
     disable_root: false
+    package_upgrade: true
+    timezone: Europe/Zurich
   late-commands:
     - echo 'ubuntu ALL=(ALL) NOPASSWD:ALL' > /target/etc/sudoers.d/ubuntu
     - 'sed -i "s/dhcp4: true/&\n      dhcp-identifier: mac/" /target/etc/netplan/00-installer-config.yaml'
+    #- sudo systemctl start qemu-guest-agent
+    #- sudo systemctl enable qemu-guest-agent
+

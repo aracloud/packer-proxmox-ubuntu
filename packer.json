@@ -49,7 +49,7 @@
 
       "http_directory": "subiquity/http",
 
-      "boot_wait": "2s",
+      "boot_wait": "5s",
       "boot_command": [
         "<esc><wait><esc><wait><f6><wait><esc><wait>",
         "<bs><bs><bs><bs><bs>",
