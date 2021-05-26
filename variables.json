@@ -4,7 +4,7 @@
 	"proxmox_api_user": "root@pam",
 	"proxmox_api_password": "{{env `proxmox_pass`}}",
 
-	"template_name": "ubuntu-20-04",
+	"template_name": "ubuntu-20-04-tmpl",
 	"template_description": "Ubuntu 20.04 by packer",
 
 	"ssh_fullname": "ubuntu",

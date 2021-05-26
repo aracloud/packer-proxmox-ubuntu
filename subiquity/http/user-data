@@ -24,7 +24,6 @@ autoinstall:
   packages:
     - openssh-server
     - qemu-guest-agent
-    - cloud-init
   ssh:
     install-server: yes
   user-data:
