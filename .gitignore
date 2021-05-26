@@ -2,6 +2,7 @@ packer_cache/
 iso/
 output/
 variables.json
+packer.log
 
 .vscode/
 .DS_Store
