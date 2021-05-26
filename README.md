@@ -16,6 +16,7 @@ Define two env variables and export
 them under your Linux packer client:
 
 export proxmox_host=<Your_PM_Host_IP>
+<br>
 export proxmox_host=<Your_PM_password>
 
 <br>
