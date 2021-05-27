@@ -19,6 +19,6 @@
 	"memory": "1024",
 	"disk_size": "16G",
 	"datastore": "vmdata",
-	"datastore_type": "lvm-thin",
+	"datastore_type": "lvm",
 	"iso": "swdata:iso/ubuntu-20.04.2-live-server-amd64.iso"
 }
