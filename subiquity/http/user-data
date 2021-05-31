@@ -1,8 +1,8 @@
 #cloud-config
 autoinstall:
   version: 1
-  #early-commands:
-    #- systemctl stop ssh # otherwise packer tries to connect and exceed max attempts
+  early-commands:
+    - systemctl stop ssh # otherwise packer tries to connect and exceed max attempts
   locale: en_US
   keyboard:
     layout: en
@@ -23,7 +23,7 @@ autoinstall:
     password: $6$exDY1mhS4KUYCE/2$zmn9ToZwTKLhCw.b4/b.ZRTIZM30JZ4QrOQ2aOXJ8yk96xpcCof0kxKwuX1kqLG/ygbJ1f8wxED22bTL4F46P0
     # password: ubuntu
   packages:
-    #- openssh-server
+    - openssh-server
     - qemu-guest-agent
   ssh:
     install-server: yes
