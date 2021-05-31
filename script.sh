@@ -7,4 +7,3 @@ sudo apt -y upgrade
 sudo apt -y install \
 software-properties-common \
 net-tools
-
