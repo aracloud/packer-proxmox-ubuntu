@@ -13,7 +13,6 @@ autoinstall:
       ethernets:
         ens18:
           dhcp4: true
-          dhcp-identifier: mac
   storage:
     layout:
       name: lvm
