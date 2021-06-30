@@ -7,4 +7,6 @@ sudo apt -y upgrade
 sudo apt -y install \
 software-properties-common \
 net-tools \
-cloud-initramfs-growroot
+cloud-initramfs-growroot \
+docker \
+docker-compose
