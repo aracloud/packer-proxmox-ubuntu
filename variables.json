@@ -12,7 +12,7 @@
 	"ssh_username": "ubuntu",
 
 	"hostname": "ubuntu-20-04",
-	"vmid": "111",
+	"vmid": "101",
 	"locale": "en_US",
 	"cores": "1",
 	"sockets": "1",

@@ -1,7 +1,7 @@
 #!/bin/bash -eux
 
 date > provision.txt
-# Install  tools needed
+#sudo apt install cloud-initramfs-growroot Install  tools needed
 sudo apt -y update
 sudo apt -y upgrade
 sudo apt -y install \
