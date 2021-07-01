@@ -17,5 +17,5 @@ mlocate
 # set hostname to what dhcp has configured for that MAC/IP
 myip=(ifconfig ens18 |grep netmask |cut -d " " -f 10)
 myhostname=(nslookup $myip |grep "name ="|sed 's/^.*name = //' |cut -d "." -f 1)
-echo $myhostname >/root/hostname.txt
+echo $myhostname > ~/hostname.txt
 
