@@ -10,4 +10,5 @@ net-tools \
 cloud-initramfs-growroot \
 docker \
 docker-compose \
-ntpdate
+ntpdate \
+mlocate
