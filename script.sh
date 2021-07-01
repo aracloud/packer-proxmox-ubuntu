@@ -26,5 +26,9 @@ if [ ! -f hostset.done ]
     sudo mv hostname /etc/hostname
     sudo sed -i s/ubuntu-20-04/\$myhostname/g /etc/hosts
     touch hostset.done
+    sudo reboot
 fi
 EOF
+
+echo \@reboot /home/ubuntu/hostset.sh >/var/spool/cron/crontabs/ubuntu
+chmod 600 /var/spool/cron/crontabs/ubuntu
