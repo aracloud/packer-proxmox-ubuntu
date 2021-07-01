@@ -1,7 +1,8 @@
 #!/bin/bash -eux
 
 date > provision.txt
-#sudo apt install cloud-initramfs-growroot Install  tools needed
+
+# defined my software stack needed
 sudo apt -y update
 sudo apt -y upgrade
 sudo apt -y install \
@@ -12,3 +13,9 @@ docker \
 docker-compose \
 ntpdate \
 mlocate
+
+# set hostname to what dhcp has configured for that MAC/IP
+myip=(ifconfig ens18 |grep netmask |cut -d " " -f 10)
+myhostname=(nslookup $myip |grep "name ="|sed 's/^.*name = //' |cut -d "." -f 1)
+echo $myhostname >/root/hostname.txt
+
