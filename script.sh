@@ -9,4 +9,5 @@ software-properties-common \
 net-tools \
 cloud-initramfs-growroot \
 docker \
-docker-compose
+docker-compose \
+ntpdate
