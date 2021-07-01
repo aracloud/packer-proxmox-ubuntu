@@ -18,7 +18,7 @@ cat <<EOF > /root/hostset.sh
 #!/bin/bash
 # set hostname to what dhcp has configured for that MAC/IP
 myip=$(ifconfig ens18 |grep netmask |cut -d " " -f 10)
-myhostname=$(nslookup $myip |grep "name ="|sed 's/^.*name = //' |cut -d "." -f 1)
-echo $myhostname > /etc/hostname
-sed -i s/ubuntu-20-04/$myhostname/g /etc/hosts
+myhostname=$(nslookup \$myip |grep "name ="|sed 's/^.*name = //' |cut -d "." -f 1)
+echo \$myhostname > /etc/hostname
+sed -i s/ubuntu-20-04/\$myhostname/g /etc/hosts
 EOF
