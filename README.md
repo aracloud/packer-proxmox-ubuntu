@@ -20,7 +20,7 @@ export proxmox_host=<Your_PM_Host_IP>
 export proxmox_host=<Your_PM_password>
 
 <br>
-Run the templeting...
+Run packer to build the template
 
 ```bash
 $ packer build -var-file="variables.json" ./packer.json
