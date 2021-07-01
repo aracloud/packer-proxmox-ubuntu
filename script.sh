@@ -20,6 +20,7 @@ cat <<EOF > ~/hostset.sh
 # set hostname to what dhcp has configured for that MAC/IP
 # and hostset.done file does not exist (one time execution)
 if [ ! -f hostset.done ]
+then
     myip=\$(ifconfig ens18 |grep netmask |cut -d " " -f 10)
     myhostname=\$(nslookup \$myip |grep "name ="|sed 's/^.*name = //' |cut -d "." -f 1)
     echo \$myhostname > hostname
