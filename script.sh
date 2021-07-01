@@ -14,7 +14,7 @@ docker-compose \
 ntpdate \
 mlocate
 
-cat <<EOF > /root/hostset.sh
+cat <<EOF > ~/hostset.sh
 #!/bin/bash
 # set hostname to what dhcp has configured for that MAC/IP
 myip=$(ifconfig ens18 |grep netmask |cut -d " " -f 10)
