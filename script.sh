@@ -30,5 +30,6 @@ if [ ! -f hostset.done ]
 fi
 EOF
 
-echo \@reboot /home/ubuntu/hostset.sh >/var/spool/cron/crontabs/ubuntu
-chmod 600 /var/spool/cron/crontabs/ubuntu
+echo \@reboot /home/ubuntu/hostset.sh > hostset.cron
+sudo mv hostset.cron /etc/cron.d/
+
