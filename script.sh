@@ -33,6 +33,6 @@ then
 fi
 EOF
 
-cat <<EOF >> /etc/crontab
-echo \@reboot root /usr/bin/sh /home/ubuntu/hostset.sh 
+sudo cat <<EOF >> /etc/crontab
+\@reboot root /usr/bin/sh /home/ubuntu/hostset.sh 
 EOF
