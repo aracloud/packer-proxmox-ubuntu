@@ -17,6 +17,8 @@ mlocate
 cat <<EOF > ~/hostset.sh
 #!/bin/bash
 
+cd /home/ubuntu
+
 # set hostname to what dhcp has configured for that MAC/IP
 # and hostset.done file does not exist (one time execution)
 if [ ! -f hostset.done ]
@@ -31,6 +33,7 @@ then
 fi
 EOF
 
-echo \@reboot /home/ubuntu/hostset.sh > hostset.cron
+echo \@reboot root /usr/bin/sh /home/ubuntu/hostset.sh > hostset.cron
 sudo mv hostset.cron /etc/cron.d/
+sudo chown root.root /etc/cron.d/hostset.cron
 
