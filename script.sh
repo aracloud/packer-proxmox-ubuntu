@@ -33,7 +33,6 @@ then
 fi
 EOF
 
-echo \@reboot root /usr/bin/sh /home/ubuntu/hostset.sh > hostset.cron
-sudo mv hostset.cron /etc/cron.d/
-sudo chown root.root /etc/cron.d/hostset.cron
-
+cat <<EOF >> /etc/crontab
+echo \@reboot root /usr/bin/sh /home/ubuntu/hostset.sh 
+EOF
