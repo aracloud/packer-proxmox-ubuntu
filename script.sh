@@ -34,5 +34,5 @@ fi
 EOF
 
 cat <<EOF | sudo tee -a /etc/crontab
-\@reboot root /usr/bin/sh /home/ubuntu/hostset.sh 
+@reboot root /usr/bin/sh /home/ubuntu/hostset.sh 
 EOF
