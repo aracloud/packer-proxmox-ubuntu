@@ -21,7 +21,6 @@ export proxmox_host=<Your_PM_password>
 
 <br>
 Run packer to build the template
-
 ```bash
 $ packer build -var-file="variables.json" ./packer.json
 ```
